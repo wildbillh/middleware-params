@@ -1,0 +1,17 @@
+{
+  "name": "middleware-params",
+  "version": "1.0.0",
+  "description": "Provides an easy mechanism for sending data to express middleware",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "middleware",
+    "params",
+    "parameters"
+  ],
+  "author": "Bill Hodges",
+  "license": "MIT"
+}
