@@ -1,7 +1,7 @@
 # middleware-params
 An easy mechanism for passing data to express middleware.
 
-##Installation
+## Installation
 ```text
 $ npm install middleware-params
 ```
@@ -37,13 +37,13 @@ using the the same name (see the options object).
 _options_
  
 An optional options object. Populate the options object if you
-want to control the key that holds the data. If not defined this defaults to
+want to control the key that holds the data. If not defined, this defaults to
 ```json
 {"name": "__PARAM"}
 ```
 Using the default options argument, stores the data in _req.locals\["\_\_PARAM"\]_.
 
-__mwParams.getData(options)__
+__mwParams.getData([options])__
 
 Returns the stored data set in earlier middleware or undefined it none is found.
  
@@ -52,7 +52,7 @@ _options_
 Same as the options object in the setData function. You should either default both
 or provide the same options object to both setData and getDate.
 
-##Examples
+## Examples
 
 ### Usage in application middleware
 ```js
