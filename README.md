@@ -1,5 +1,7 @@
+[![Build Status](https://travis-ci.org/wildbillh/middleware-params.svg?branch=master)](https://travis-ci.org/wildbillh/middleware-params)[![npm version](https://badge.fury.io/js/middleware-params.svg)](https://badge.fury.io/js/middleware-params)
+
 # middleware-params
-An easy mechanism for passing data to express middleware.
+_An easy mechanism for passing data to express middleware_
 
 ## Installation
 ```text
