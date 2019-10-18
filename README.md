@@ -17,10 +17,10 @@ const {getData, setData} = require('middleware-params');
 
 The middleware-params module exports two functions. 
 
-_setData_ can be applied as a router or application middleware to set values that can be
+_setData()_ can be applied as router or application middleware to set values that can be
 used by later middleware in the chain. 
 
-_getData_ is a convenience function for getting the set data
+_getData()_ is a convenience function for getting the set data
 from the request object.
 
 ---
@@ -42,7 +42,11 @@ want to control the key that holds the data. If not defined, this defaults to
 ```json
 {"name": "__PARAM"}
 ```
-Using the default options argument, stores the data in _req.locals\["\_\_PARAM"\]_.
+Using the default options argument, stores the data in
+```
+req.locals["__PARAM"]
+```
+
 
 ---
 
@@ -53,7 +57,7 @@ Returns the stored data set in earlier middleware or undefined if none is found.
 ##### options
 
 Same as the options object in the setData function. You should either default both
-or provide the same options object to both setData and getDate.
+or provide the same options object to both _setData()_ and _getData()_.
 
 ---
 
