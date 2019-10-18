@@ -8,10 +8,6 @@ $ npm install middleware-params
 
 ## API
 ```text
-const mwParams = require('middleware-params');
-```
-Or
-```text
 const {getData, setData} = require('middleware-params)';
 ```
 
@@ -94,5 +90,22 @@ app.get("/", [setData(myData)], (req, res) => {
     console.log(getData());    
 });
 ```
+  
+### Using custom key names
+```js
+const express = require('express');
+const {getData, setData} = require('middleware-params');
+
+const app = express();
+let myData = {"somekey": "someval"};
+
+// Set the data in middleware of a route
+app.get("/", [setData(myData, {"name": "custom"})], (req, res) => {
+  // Use the convenience function to get the data.
+  console.log(getData({"name": "custom"}));
+  // This would get the same results
+  console.log(req.locals.custom);      
+});
+```  
   
   
