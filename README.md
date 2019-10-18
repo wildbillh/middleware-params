@@ -122,13 +122,13 @@ app.get("/", [setData(myData, {"name": "custom"})], (req, res) => {
 ```
 
 
-### Test cases and code coverage
+## Test cases and code coverage
 ```text
 npm test
 npm run coverage
 ``` 
 
-### License
+## License
 MIT 
   
   
