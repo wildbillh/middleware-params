@@ -20,17 +20,17 @@ gleaned by later middleware in the chain.
 getData is a convenience function for getting the set data
 from the request object.
 
-__mwParams.setData(data, [options])__
+#### mwParams.setData(data, [options])
 
 Sets data in the request object that can be read from 
 middleware further down the chain. 
 
-_data_
+##### data
 
 The data to be set. This call will create or replace any data
 using the the same name (see the options object).
 
-_options_
+##### options
  
 An optional options object. Populate the options object if you
 want to control the key that holds the data. If not defined, this defaults to
@@ -39,11 +39,11 @@ want to control the key that holds the data. If not defined, this defaults to
 ```
 Using the default options argument, stores the data in _req.locals\["\_\_PARAM"\]_.
 
-__mwParams.getData([options])__
+#### mwParams.getData([options])
 
-Returns the stored data set in earlier middleware or undefined it none is found.
+Returns the stored data set in earlier middleware or undefined if none is found.
  
-_options_
+##### options
 
 Same as the options object in the setData function. You should either default both
 or provide the same options object to both setData and getDate.
@@ -106,6 +106,16 @@ app.get("/", [setData(myData, {"name": "custom"})], (req, res) => {
   // This would get the same results
   console.log(req.locals.custom);      
 });
-```  
+```
+
+
+### Test cases and code coverage
+```text
+npm test
+npm run coverage
+``` 
+
+### License
+MIT 
   
   
