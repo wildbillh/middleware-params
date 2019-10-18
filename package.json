@@ -1,6 +1,6 @@
 {
   "name": "middleware-params",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Provides an easy mechanism for sending data to express middleware",
   "main": "index.js",
   "scripts": {
