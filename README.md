@@ -3,24 +3,27 @@
 # middleware-params
 _An easy mechanism for passing data to express middleware_
 
+
 ## Installation
 ```text
 $ npm install middleware-params
 ```
 
+
 ## API
 ```text
-const {getData, setData} = require('middleware-params)';
+const {getData, setData} = require('middleware-params');
 ```
 
+The middleware-params module exports two functions. 
 
-The mwParams object exposes 2 functions. 
+_setData_ can be applied as a router or application middleware to set values that can be
+used by later middleware in the chain. 
 
-SetData can be used as router or application middleware to set values that can be
-gleaned by later middleware in the chain. 
-
-getData is a convenience function for getting the set data
+_getData_ is a convenience function for getting the set data
 from the request object.
+
+---
 
 #### mwParams.setData(data, [options])
 
@@ -41,6 +44,8 @@ want to control the key that holds the data. If not defined, this defaults to
 ```
 Using the default options argument, stores the data in _req.locals\["\_\_PARAM"\]_.
 
+---
+
 #### mwParams.getData([options])
 
 Returns the stored data set in earlier middleware or undefined if none is found.
@@ -49,6 +54,8 @@ Returns the stored data set in earlier middleware or undefined if none is found.
 
 Same as the options object in the setData function. You should either default both
 or provide the same options object to both setData and getDate.
+
+---
 
 ## Examples
 
