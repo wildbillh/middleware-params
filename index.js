@@ -2,6 +2,11 @@
 const PARAM_OBJ = "__PARAM";
 const DEFAULT_OBJ = {"name": PARAM_OBJ};
 
+/**
+ * Test for object
+ * @param item
+ * @returns {boolean} - true if passed an object
+ */
 const isObject = (item) => {
     return (typeof item === "object" && !Array.isArray(item) && item !== null);
 };
@@ -17,7 +22,7 @@ module.exports.setData = (data, options) => {
 
     return (req, res, next) => {
 
-        let _options = DEFAULT_OBJ;
+        let _options = Object.assign({}, DEFAULT_OBJ);
 
         // If the user supplied an options object, merge it to the default
         if (options && isObject(options)) {
