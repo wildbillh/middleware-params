@@ -52,8 +52,12 @@ module.exports.getData = (req, options) => {
     if (options && isObject(options)) {
         _options = Object.assign(_options, options);
     }
-
+    
+    //console.log(typeof req.locals[_options.name]);
     // If the object exists return it, else returned undefined
-    return (req && req.locals && req.locals[_options.name]) ? req.locals[_options.name] : undefined;
+    return (req
+        && req.locals
+        && (req.locals[_options.name] !== 'undefined'))
+        ? req.locals[_options.name] : undefined;
 
 };
